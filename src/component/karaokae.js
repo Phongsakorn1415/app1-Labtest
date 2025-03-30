@@ -13,17 +13,19 @@ const Karaokae = () =>{
     const result = useRef();
 
     const calculate = () =>{
+        const alertText = "กรุณากรอกจำนวนชั่วโมง"
+
         if(noStCard.current.checked){
             if(noStCardHr.current.value != ""){
                 setCalResult(parseFloat(noStCardHr.current.value) * 120)
             }else{
-                alert("กรุณากรอกจำนวนชั่วโมง")
+                alert(alertText)
             }
         }else if(haveStCard.current.checked){
             if(haveStCardHr.current.value != ""){
                 setCalResult(parseFloat(haveStCardHr.current.value) * 80)
             }else{
-                alert("กรุณากรอกจำนวนชั่วโมง")
+                alert(alertText)
             }
         }
     }
